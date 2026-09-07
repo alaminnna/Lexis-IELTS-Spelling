@@ -1,0 +1,179 @@
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+/* Genre: modern-minimal · Macrostructure: Workbench · Theme: Quiet Warm (catalog) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design Tokens — OKLCH, locked */
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 8% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 8% 10%;
+  --muted: 240 6% 96%;
+  --muted-foreground: 240 4% 44%;
+  --border: 240 6% 90%;
+  --input: 240 6% 90%;
+  --ring: 14 85% 58%;
+  --primary: 14 85% 58%;
+  --primary-foreground: 0 0% 100%;
+  --accent: 14 85% 58%;
+  --accent-foreground: 0 0% 100%;
+  --success: 142 72% 38%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 92% 50%;
+  --warning-foreground: 240 8% 10%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --radius: 12px;
+
+  /* Semantic extended */
+  --surface: 0 0% 100%;
+  --surface-2: 240 6% 98%;
+  --surface-3: 240 6% 96%;
+  --text-1: 240 8% 10%;
+  --text-2: 240 4% 32%;
+  --text-3: 240 4% 44%;
+  --text-4: 240 3% 58%;
+
+  /* Spacing - 4pt scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Progress indicator */
+  --progress-tier-width: 33.333%;
+
+  /* Typography scale */
+  --text-display: 40px;
+  --text-display-s: 32px;
+}
+
+.dark {
+  --background: 240 8% 7%;
+  --foreground: 0 0% 96%;
+  --card: 240 6% 10%;
+  --card-foreground: 0 0% 96%;
+  --muted: 240 6% 15%;
+  --muted-foreground: 240 4% 62%;
+  --border: 240 6% 16%;
+  --input: 240 6% 16%;
+  --ring: 14 85% 58%;
+  --primary: 14 82% 60%;
+  --primary-foreground: 240 8% 7%;
+  --accent: 14 82% 60%;
+  --accent-foreground: 240 8% 7%;
+  --success: 142 68% 42%;
+  --success-foreground: 0 0% 100%;
+  --warning: 38 90% 56%;
+  --warning-foreground: 240 8% 7%;
+  --destructive: 0 68% 58%;
+  --destructive-foreground: 0 0% 100%;
+
+  --surface: 240 8% 7%;
+  --surface-2: 240 6% 11%;
+  --surface-3: 240 6% 15%;
+  --text-1: 0 0% 96%;
+  --text-2: 240 4% 78%;
+  --text-3: 240 4% 62%;
+  --text-4: 240 3% 48%;
+}
+
+/* Base */
+@layer base {
+  * { @apply border-border; }
+  html { overflow-x: clip; scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: "Instrument Sans", system-ui, -apple-system, sans-serif;
+    font-feature-settings: "ss01" 1, "ss02" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1, h2, h3 { letter-spacing: -0.02em; line-height: 1.05; }
+  h1 { font-weight: 650; }
+  ::selection { background: hsl(var(--accent) / 0.18); }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 2px; }
+}
+
+/* Utility for practice input */
+.practice-input {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar { width: 6px; height: 6px; }
+*::-webkit-scrollbar-thumb { background: hsl(var(--border)); border-radius: 999px; }
+*::-webkit-scrollbar-track { background: transparent; }
+
+/* Motion reduce */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Glass only when improves */
+.glass {
+  background: hsl(var(--card) / 0.72);
+  backdrop-filter: blur(12px) saturate(1.15);
+  border: 1px solid hsl(var(--border) / 0.6);
+}
+.dark .glass {
+  background: hsl(var(--card) / 0.6);
+  border-color: hsl(var(--border) / 0.4);
+}
+
+/* Shimmer for loading */
+.shimmer {
+  background: linear-gradient(90deg, transparent, hsl(var(--muted)), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.35s infinite;
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Hallmark — modern gradient animation for practice (OKLCH locked, uses tokens) */
+@keyframes gradientFloat {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(10px, -8px, 0) scale(1.02); }
+}
+.animate-gradient {
+  animation: gradientFloat 9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-gradient { animation: none; }
+}
+/* Progress tier indicator */
+.progress-tier-indicator {
+  width: var(--progress-tier-width);
+}
+
+/* Progress bar initial scale — GSAP overrides this via transform */
+.progress-scale {
+  transform: scaleX(var(--progress-scale-x, 0));
+}
+
+/* Fit viewport — no scroll on practice, respects 320/375/414/768 */
+.practice-fit {
+  height: calc(100dvh - 64px - 40px);
+  max-height: calc(100dvh - 64px - 40px);
+  overflow: hidden;
+}
+@media (max-width: 1024px) {
+  .practice-fit { height: calc(100dvh - 56px - 40px); max-height: calc(100dvh - 56px - 40px); }
+}

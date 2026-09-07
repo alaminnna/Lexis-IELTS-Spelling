@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfile (local-first per-browser)",
+  "type": "object",
+  "required": ["id", "name", "onboardingCompleted", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "description": "stable per browser (local-user or uuid), never shared" },
+    "name": { "type": "string", "minLength": 1, "maxLength": 60, "pattern": "^(?!\\s*$).+", "description": "trimmed, sanitized, non-empty" },
+    "onboardingCompleted": { "type": "boolean", "description": "false → show Onboarding; true → dashboard" },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": ["string", "null"], "format": "date-time" }
+  },
+  "additionalProperties": false,
+  "examples": [
+    { "id": "local-user", "name": "Rahim", "onboardingCompleted": true, "createdAt": "2026-09-07T09:00:00.000Z", "updatedAt": null },
+    { "id": "local-user", "name": "Karim", "onboardingCompleted": true, "createdAt": "2026-09-07T09:02:00.000Z", "updatedAt": "2026-09-07T10:00:00.000Z" }
+  ]
+}

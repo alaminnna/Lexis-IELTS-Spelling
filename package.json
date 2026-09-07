@@ -1,0 +1,80 @@
+{
+  "name": "lexis-ielts-spelling-trainer",
+  "version": "1.0.0",
+  "description": "Premium local-first IELTS spelling trainer — 884 words, adaptive learning, offline PWA. No login, private per-browser.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Al A Min <ikalamin0@gmail.com> (https://alaminnna.ami.bd)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alaminnna/lexis-ielts-spelling-trainer.git"
+  },
+  "homepage": "https://alaminnna.ami.bd",
+  "bugs": {
+    "url": "https://github.com/alaminnna/lexis-ielts-spelling-trainer/issues"
+  },
+  "keywords": [
+    "ielts",
+    "spelling",
+    "learning",
+    "adaptive",
+    "pwa",
+    "offline",
+    "vite",
+    "react",
+    "typescript",
+    "tailwind"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "gen:words": "node scripts/parse-words.mjs",
+    "typecheck": "tsc -b --noEmit",
+    "lint": "oxlint",
+    "prepare": "npm run typecheck"
+  },
+  "files": [
+    "dist",
+    "public",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.11.0",
+    "gsap": "^3.15.0",
+    "idb": "^8.0.0",
+    "lenis": "^1.3.26",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.3.0",
+    "recharts": "^2.13.0",
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.185.1",
+    "zustand": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@types/three": "^0.185.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "autoprefixer": "^10.4.20",
+    "oxlint": "^1.79.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2",
+    "vite-plugin-pwa": "^1.3.0",
+    "workbox-window": "^7.4.1"
+  }
+}
