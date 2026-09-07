@@ -28,10 +28,9 @@ export default function About() {
           <Badge className="border bg-card">About the Builder</Badge>
           <div className="mt-4 flex flex-col lg:flex-row gap-8 items-start">
             <img
-              src="https://alaminnna.ami.bd/assets/images/profile/alaminnna.jpeg"
-              alt="Al A Min"
+              src="/assets/images/profile/alaminnna.jpg"
+              alt="Al A Min — alaminnna"
               className="h-28 w-28 rounded-2xl object-cover border bg-card shadow-sm"
-              onError={e => ((e.target as HTMLImageElement).style.display = "none")}
             />
             <div className="flex-1 min-w-0">
               <h1 className="text-[30px] lg:text-[40px] font-semibold tracking-[-0.04em] leading-none">AL AMIN</h1>
