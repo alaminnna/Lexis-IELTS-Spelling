@@ -57,9 +57,12 @@ coverage
 temp
 tmp
 
-# Spec / AI
+# Spec / AI — not for GitHub (local only)
 .claude
-.opencode/*/node_modules
+.opencode/
+.specify/
+specs/
+.github/
 
 # Keep
 !public/_redirects
