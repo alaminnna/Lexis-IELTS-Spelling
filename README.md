@@ -86,6 +86,8 @@ AI-Powered Full Stack Developer — Dhaka, Bangladesh
 - Website: [alaminnna.ami.bd](https://alaminnna.ami.bd)
 - GitHub: [github.com/alaminnna](https://github.com/alaminnna)
 - LinkedIn: [linkedin.com/in/alaminnna](https://linkedin.com/in/alaminnna)
+- Facebook: [facebook.com/Al A Min](https://www.facebook.com/profile.php?id=61578789046935)
+- Instagram: [instagram.com/alaminnna](https://www.instagram.com/alaminnna)
 - Email: `ikalamin0@gmail.com`
 
 ### License

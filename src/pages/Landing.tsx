@@ -432,6 +432,11 @@ function Footer() {
         <div className="text-xs text-muted-foreground">
           <div>© {new Date().getFullYear()} Lexis • IELTS Spelling • Local-first</div>
           <div className="mt-1">No account required. Your data never leaves this browser.</div>
+          <div className="mt-2 flex gap-3">
+            <a href="https://www.facebook.com/profile.php?id=61578789046935" target="_blank" rel="noreferrer" className="underline hover:text-foreground">Facebook</a>
+            <a href="https://www.instagram.com/alaminnna" target="_blank" rel="noreferrer" className="underline hover:text-foreground">Instagram</a>
+            <a href="https://github.com/alaminnna" target="_blank" rel="noreferrer" className="underline hover:text-foreground">GitHub</a>
+          </div>
         </div>
       </div>
     </footer>

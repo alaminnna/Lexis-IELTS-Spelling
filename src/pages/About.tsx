@@ -8,8 +8,10 @@ const links = [
   { label: "Website", href: "https://alaminnna.ami.bd", sub: "alaminnna.ami.bd" },
   { label: "GitHub", href: "https://github.com/alaminnna", sub: "github.com/alaminnna" },
   { label: "LinkedIn", href: "https://linkedin.com/in/alaminnna", sub: "linkedin.com/in/alaminnna" },
-  { label: "X / Twitter", href: "https://x.com/alaminnna", sub: "@alaminnna" },
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61578789046935", sub: "facebook.com/Al A Min" },
+  { label: "Instagram", href: "https://www.instagram.com/alaminnna", sub: "instagram.com/alaminnna" },
   { label: "YouTube", href: "https://youtube.com/@alaminnna", sub: "@alaminnna" },
+  { label: "X / Twitter", href: "https://x.com/alaminnna", sub: "@alaminnna" },
   { label: "Email", href: "mailto:ikalamin0@gmail.com", sub: "ikalamin0@gmail.com" },
 ]
 
@@ -40,6 +42,8 @@ export default function About() {
               <div className="mt-4 flex flex-wrap gap-2">
                 <a href="https://alaminnna.ami.bd" target="_blank" rel="noreferrer"><Button className="rounded-full h-9">Visit alaminnna.ami.bd</Button></a>
                 <a href="https://github.com/alaminnna" target="_blank" rel="noreferrer"><Button variant="outline" className="rounded-full h-9">GitHub</Button></a>
+                <a href="https://www.instagram.com/alaminnna" target="_blank" rel="noreferrer"><Button variant="outline" className="rounded-full h-9">Instagram</Button></a>
+                <a href="https://www.facebook.com/profile.php?id=61578789046935" target="_blank" rel="noreferrer"><Button variant="outline" className="rounded-full h-9">Facebook</Button></a>
                 <Link to="/dashboard"><Button variant="ghost" className="rounded-full h-9 border">Open Lexis →</Button></Link>
               </div>
             </div>
@@ -121,13 +125,14 @@ export default function About() {
             </div>
             <div className="mt-4 flex flex-wrap gap-1.5 text-xs">
               {[
+                ["Facebook","https://www.facebook.com/profile.php?id=61578789046935"],
+                ["Instagram","https://www.instagram.com/alaminnna"],
                 ["Medium","https://medium.com/@Alaminnna"],
                 ["DEV","https://dev.to/alaminnna"],
                 ["Hashnode","https://alaminnna.hashnode.dev"],
                 ["Product Hunt","https://producthunt.com/@alaminnna"],
                 ["StackOverflow","https://stackoverflow.com/users/33006113/alaminnna"],
                 ["Bluesky","https://bsky.app/profile/alaminnna.bsky.social"],
-                ["Instagram","https://instagram.com/alaminnna"],
               ].map(([k,href]) => (
                 <a key={k} href={href} target="_blank" rel="noreferrer" className="px-2.5 py-1 rounded-full border bg-card hover:bg-muted">{k}</a>
               ))}
